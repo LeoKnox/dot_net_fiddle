@@ -31,8 +31,9 @@ public class Program
 	
 	public static void Main()
 	{
-		//Room first = new Room("Entry", 5, 4);
+		Room second = new Room("Entry", 5, 4);
 		Room first = new Room();
 		first.DisplayRoom();
+		second.DisplayRoom();
 	}
 }
