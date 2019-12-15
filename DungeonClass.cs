@@ -29,11 +29,49 @@ public class Program
 		}
 	}
 	
+	class Fighter
+	{
+		private string Name { get; set; }
+		private int Attack { get; set; }
+		
+		public Fighter(string n, int a)
+		{
+			this.Name = n;
+			this.Attack = a;
+		}
+		
+		public int Fight()
+		{
+			return this.Attack;
+		}
+	}
+	
+	class Monster
+	{
+		private string Called { get; set; }
+		private int Hp { get; set; }
+		
+		public Monster(string c, int h)
+		{
+			this.Called = c;
+			this.Hp = h;
+		}
+		
+		public void Hit(int damage)
+		{
+			this.Hp -= damage;
+			Console.WriteLine("Monster {0} is hit and has {1} HP!", this.Called, this.Hp);
+		}
+	}
+	
 	public static void Main()
 	{
 		Room second = new Room("Entry", 5, 4);
 		Room first = new Room();
 		first.DisplayRoom();
 		second.DisplayRoom();
+		Fighter goodguy = new Fighter("Aelien", 3);
+		Monster badguy = new Monster("Orc", 6);
+		badguy.Hit(goodguy.Fight());
 	}
 }
