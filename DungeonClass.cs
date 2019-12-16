@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 					
 public class Program
 {
@@ -48,7 +49,7 @@ public class Program
 	
 	class Monster
 	{
-		private string Called { get; set; }
+		public string Called { get; set; }
 		private int Hp { get; set; }
 		
 		public Monster(string c, int h)
@@ -66,12 +67,15 @@ public class Program
 	
 	public static void Main()
 	{
+		List<Monster> mons = new List<Monster>();
 		Room second = new Room("Entry", 5, 4);
 		Room first = new Room();
 		first.DisplayRoom();
 		second.DisplayRoom();
 		Fighter goodguy = new Fighter("Aelien", 3);
 		Monster badguy = new Monster("Orc", 6);
+		mons.Add(badguy);
+		Console.WriteLine("Hello " + mons[0].Called);
 		badguy.Hit(goodguy.Fight());
 	}
 }
