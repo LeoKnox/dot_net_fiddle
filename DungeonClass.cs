@@ -8,6 +8,7 @@ public class Program
 		private string RoomName { get; set; }
 		private int Width { get; set; }
 		private int Height { get; set; }
+		public List<Monster> Mobs { get; set; }
 		
 		public Room()
 		{
@@ -72,6 +73,8 @@ public class Program
 		Room first = new Room();
 		first.DisplayRoom();
 		second.DisplayRoom();
+		first.Mobs.Add(badguy);
+		Console.WriteLine("Mobs " + first.Mobs[0].Called);
 		Fighter goodguy = new Fighter("Aelien", 3);
 		Monster badguy = new Monster("Orc", 6);
 		mons.Add(badguy);
