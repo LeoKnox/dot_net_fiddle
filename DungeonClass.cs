@@ -18,11 +18,12 @@ public class Program
 			this.Width = rnd.Next(9);
 		}
 		
-		public Room(string name, int w, int h)
+		public Room(string name, int w, int h, Monster m)
 		{
 			this.RoomName = name;
 			this.Width = w;
 			this.Height = h;
+			this.Mobs.Add(m);
 		}
 		
 		public void DisplayRoom()
@@ -69,15 +70,14 @@ public class Program
 	public static void Main()
 	{
 		List<Monster> mons = new List<Monster>();
-		Room second = new Room("Entry", 5, 4);
+		Monster badguy = new Monster("Orc", 6);
+		Room second = new Room("Entry", 5, 4, badguy);
 		Room first = new Room();
 		first.DisplayRoom();
 		second.DisplayRoom();
-		first.Mobs.Add(badguy);
-		Console.WriteLine("Mobs " + first.Mobs[0].Called);
 		Fighter goodguy = new Fighter("Aelien", 3);
-		Monster badguy = new Monster("Orc", 6);
 		mons.Add(badguy);
+		Console.WriteLine("Mobs " + second.Mobs[0].Called);
 		Console.WriteLine("Hello " + mons[0].Called);
 		badguy.Hit(goodguy.Fight());
 	}
