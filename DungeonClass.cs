@@ -77,7 +77,7 @@ public class Program
 		second.DisplayRoom();
 		Fighter goodguy = new Fighter("Aelien", 3);
 		mons.Add(badguy);
-		Console.WriteLine("Mobs " + second.Mobs[0].Called);
+		Console.WriteLine("I'm a mob called " + second.Mobs[0].Called);
 		Console.WriteLine("Hello " + mons[0].Called);
 		badguy.Hit(goodguy.Fight());
 	}
