@@ -19,7 +19,8 @@ public class Program
 	
 	public static void Main()
 	{
-		ClassArray[] sed = new ClassArray[] {[0, 1, 2, 3, 4]}; // this line isn't worknig
+		ClassArray[] sed = new ClassArray[] {[0, 1, 2, 3, 4]}; // this line isn't working
+		ClassArray sed.nums = new[] {0, 1, 2, 3, 4}; // not working either
 		Console.WriteLine(sed.Roller(3));
 	}
 }
