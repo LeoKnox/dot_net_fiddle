@@ -6,6 +6,7 @@ public class Program
 	{
 		public string Name { get; set; }
 		public int Str { get; set; }
+		public int Int { get; set; }
 		
 		public Test(string name, int str)
 		{
