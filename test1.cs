@@ -7,6 +7,7 @@ public class Program
 		public string Name { get; set; }
 		public int Str { get; set; }
 		public int Int { get; set; }
+		public List<int> Posts { get; set; } = new List<int>();
 		
 		public Test(string name, int str)
 		{
