@@ -30,6 +30,11 @@ public class Program
 		}
 		Console.WriteLine("Total of {0}", names.Count);
 		
+		if (spot != -1)
+			Console.WriteLine("You've got a message");
+		else
+			Console.WriteLine("Fun");
+		
 		Test name1 = new Test("chuck", 12);
 		Console.WriteLine("Hello {0}", name1.Name);
 		Console.WriteLine("{0} boosts strength from {1} to {2}", name1.Name, name1.Str, name1.Boost());
