@@ -21,6 +21,14 @@ public class Program
 	}
 	public static void Main()
 	{
+		var names = new List<string> { "<name>", "first", "second" };
+		
+		Console.WriteLine("Hello World");
+		foreach (var word in names)
+		{
+			Console.WriteLine("Hello {0}", word.ToUpper());
+		}
+		
 		Test name1 = new Test("chuck", 12);
 		Console.WriteLine("Hello {0}", name1.Name);
 		Console.WriteLine("{0} boosts strength from {1} to {2}", name1.Name, name1.Str, name1.Boost());
