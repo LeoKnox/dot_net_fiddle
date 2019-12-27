@@ -28,6 +28,7 @@ public class Program
 		{
 			Console.WriteLine("Hello {0}", word.ToUpper());
 		}
+		Console.WriteLine("Total of {0}", names.Count);
 		
 		Test name1 = new Test("chuck", 12);
 		Console.WriteLine("Hello {0}", name1.Name);
