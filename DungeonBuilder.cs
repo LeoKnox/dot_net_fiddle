@@ -29,6 +29,15 @@ public class Program
 			Console.WriteLine(wall.ToString());
 		}
 	}
+	
+	public class HallWay
+	{
+		public void Draw()
+		{
+			Console.WriteLine("green");
+		}
+	}
+	
 	public static void Main()
 	{
 		DrawRoom hall = new DrawRoom();
