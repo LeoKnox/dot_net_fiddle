@@ -42,6 +42,7 @@ public class Program
 	{
 		DrawRoom hall = new DrawRoom();
 		hall.width(3);
+		hall.width(5);
 		hall.dw();
 	}
 }
