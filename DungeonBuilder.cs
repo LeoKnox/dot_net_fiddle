@@ -40,9 +40,10 @@ public class Program
 	
 	public static void Main()
 	{
+		Random rnd = new Random();
+		int x = rnd.Next(2, 6);
 		DrawRoom hall = new DrawRoom();
-		hall.width(3);
-		hall.width(5);
+		hall.width(x);
 		hall.dw();
 	}
 }
