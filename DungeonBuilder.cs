@@ -34,7 +34,7 @@ public class Program
 	{
 		public void Draw()
 		{
-			Console.WriteLine("green");
+			Console.WriteLine("red");
 		}
 	}
 	
