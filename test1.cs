@@ -34,9 +34,9 @@ public class Program
 			Console.WriteLine("You've got a message");
 		else
 			Console.WriteLine("Fun");
-		
+		Console.WriteLine("read line here");
 		Test name1 = new Test("chuck", 12);
-		Console.WriteLine("Hello {0}", name1.Name);
+		Console.WriteLine("Hello {0}", name1.Name);C
 		Console.WriteLine("{0} boosts strength from {1} to {2}", name1.Name, name1.Str, name1.Boost());
 	}
 }
