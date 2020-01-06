@@ -10,6 +10,7 @@ public class Program
 		public int length { get; set; }
 		public List<string> items = new List<string>();
 		public List<string> mobs = new List<string>();
+		//public List<string> char { get; set; }
 		
 		public Room(int hh, int ww, int ll)
 		{
@@ -30,7 +31,7 @@ public class Program
 		
 		public override string ToString()
 		{
-			return ("Room is {0} by {1}. Containing {2}.", length, width, height);
+			return ("Room is 0 by 0. Containing." + height);
 		}
 	}
 	
@@ -44,6 +45,6 @@ public class Program
 		{
 			Console.Write(" {0} and", mob);
 		}
-		Console.WriteLine(" more!");
+		Console.WriteLine(newdun.ToString());
 	}
 }
