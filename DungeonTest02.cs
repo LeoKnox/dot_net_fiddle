@@ -3,14 +3,20 @@ using System.Collections.Generic;
 					
 public class Program
 {
+	public class Monster
+	{
+		public string Name { get; set; }
+		public int Str { get; set; }
+	}
+	
 	public class Room
 	{
 		public int height { get; set; }
 		public int width { get; set; }
 		public int length { get; set; }
 		public List<string> items = new List<string>();
-		public List<string> mobs = new List<string>();
-		public List<string> character { get; set; }
+		public List<Monster> mobs = new List<Monster>();
+		public List<string> character = new List<string>();
 		
 		public Room(int hh, int ww, int ll)
 		{
@@ -19,14 +25,22 @@ public class Program
 			this.length = ll;
 		}
 		
+		public void AddChar(string s)
+		{
+			this.character.Add(s);
+		}
+		
 		public void AddItem(string y)
 		{
 			this.items.Add(y);
 		}
 		
-		public void AddMob(string x)
+		public void AddMob(string x, int s)
 		{
-			this.mobs.Add(x);
+			Monster mobsy = new Monster();
+			mobsy.Name = x;
+			mobsy.Str = s;
+			this.mobs.Add(mobsy);
 		}
 		
 		public override string ToString()
@@ -38,13 +52,14 @@ public class Program
 	public static void Main()
 	{
 		Room newdun = new Room(8, 4, 5);
-		newdun.AddMob("Orc");
-		newdun.AddMob("Goblin");
-		Console.Write(newdun.ToString());
-		foreach (var mob in newdun.mobs)
+		newdun.AddChar("Aelien");
+		newdun.AddChar("Colette");
+		newdun.AddMob("Orc", 20);
+		foreach (var ch in newdun.character)
 		{
-			Console.Write(" {0} and", mob);
+			Console.Write(" {0} and", ch);
 		}
+		Console.WriteLine();
 		Console.WriteLine(newdun.ToString());
 	}
 }
