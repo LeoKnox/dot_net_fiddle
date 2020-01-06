@@ -10,7 +10,7 @@ public class Program
 		public int length { get; set; }
 		public List<string> items = new List<string>();
 		public List<string> mobs = new List<string>();
-		//public List<string> char { get; set; }
+		public List<string> character { get; set; }
 		
 		public Room(int hh, int ww, int ll)
 		{
