@@ -10,7 +10,7 @@ namespace HelloWorldMvcApp
 		public ActionResult Index()
 		{
 			Monster Orc = new Monster("Crud", 10, 3, 5.2d);
-			ViewData["character"] = Orc.Damage;
+			ViewData["character"] = Orc.Attack(Orc.Offense);
 			return View(new SampleViewModel());
 		}
 
