@@ -1,29 +1,33 @@
 using System;
-using System.Web.Mvc;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HelloWorldMvcApp
 {
-	public class HomeController : Controller
+	public class SampleViewModel
 	{
-		[HttpGet]
-		public ActionResult Index()
-		{
-			ViewData["character"] = "Colette";
-			return View(new SampleViewModel());
-		}
+		[Required]
+		[MinLength(10)]
+		[MaxLength(100)]
+		[Display(Name = "Ask Magic 8 Ball any question:")]
+		public string Question { get; set; }
 
-
-		[HttpPost]
-		public JsonResult GetAnswer(string question)
-		{				
-			int index = _rnd.Next(_db.Count);
-			var answer = _db[index];
-			return Json(answer);
-		}
-
-		private static Random _rnd = new Random();
+		//See here for list of answers
+		public string Answer { get; set; }
+	}
+	
+	public class Monster
+	{
+		public string Name { get; set; }
+		public int Offense { get; set; }
+		public int Defense { get; set; }
+		public double Damage { get; set; }
 		
-		private static List<string> _db = new List<string> { "Yes", "No", "Definitely, yes", "I don't know", "Looks like, yes"} ;
+		public Monster(string n, int o, int d, double dm)
+		{
+			this.Name = n;
+			this.Offense = o;
+			this.Defense = d;
+			this.Damage = dm;
+		}
 	}
 }
