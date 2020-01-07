@@ -20,14 +20,22 @@ namespace HelloWorldMvcApp
 		public string Name { get; set; }
 		public int Offense { get; set; }
 		public int Defense { get; set; }
-		public Decimal Damage { get; set; }
+		public double Damage { get; set; }
 		
-		public Monster(string n, int o, int d, int dm)
+		public Monster(string n, int o, int d, double dm)
 		{
 			this.Name = n;
 			this.Offense = o;
 			this.Defense = d;
 			this.Damage = dm;
+		}
+		
+		public string Attack(int x)
+		{
+			var rand = new Random();
+			double y=Convert.ToDouble(rand.Next(x));
+			double hp = this.Damage*y;
+			return "This Orc does " + hp + " damage";
 		}
 	}
 }
