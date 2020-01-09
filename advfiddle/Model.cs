@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace HelloWorldMvcApp
 {
@@ -13,6 +14,16 @@ namespace HelloWorldMvcApp
 
 		//See here for list of answers
 		public string Answer { get; set; }
+	}
+	
+	public class Room
+	{
+		public List<Monster> mobs = new List<Monster>();
+		
+		public void AddMonster(Monster M)
+		{
+			this.mobs.Add(M);
+		}
 	}
 	
 	public class Monster
