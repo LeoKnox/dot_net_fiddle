@@ -11,6 +11,8 @@ namespace HelloWorldMvcApp
 		{
 			Monster Orc = new Monster("Crud", 10, 3, 5.2d);
 			ViewData["character"] = Orc.Attack(Orc.Offense);
+			Room VRoom = new Room();
+			VRoom.AddMonster(Orc);
 			return View(new SampleViewModel());
 		}
 
