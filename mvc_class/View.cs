@@ -1,5 +1,5 @@
 @model HelloWorldMvcApp.Room
-@{
+@{  /* optional for alternate version */
 var room = ViewData.Model;
 }
 
@@ -17,6 +17,7 @@ Room Width: @room.Width Height: @room.Height
 {
 <p>@mo</p>
 }
+/* <p>@Model.Width</p>   alternate version */
 </div>
 <br/><br/>
 <div class="alert alert-warning fade">
