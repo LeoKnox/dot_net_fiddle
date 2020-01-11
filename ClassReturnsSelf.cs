@@ -20,8 +20,12 @@ public class Program
 		
 		public Room MakeRoom()
 		{
-			this.Length = 3;
-			this.Width = 4;
+			Random random = new Random();
+			int x = random.Next(1, 12);
+			int y = random.Next(1, 12);
+			
+			this.Length = x;
+			this.Width = y;
 			return this;
 		}
 	}
@@ -32,6 +36,11 @@ public class Program
 		Dungeon big = new Dungeon();
 		test.MakeRoom();
 		big.AddRoom(test);
-		Console.WriteLine("Hello World " + big.Rooms[0].Length);
+		big.AddRoom(test); // doesn't work repeats same number, for now have to generate in Main()
+		Console.WriteLine("Hello World ");
+		foreach (var r in big.Rooms)
+		{
+			Console.WriteLine(r.Length + " " + r.Width);
+		}
 	}
 }
