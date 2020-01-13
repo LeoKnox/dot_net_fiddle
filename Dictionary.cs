@@ -20,6 +20,7 @@ public class Program
 		Dictionary<string, int> nums = new Dictionary<string, int>();
 		Dictionary<int, Strs> lets = new Dictionary<int, Strs>();
 		Strs bbb = new Strs("Three", "Four");
+		Strs ccc = new Strs("One", "Three");
 		lets[1] = bbb;
 		nums.Add("One", 1);
 		nums.Add("Two", 2);
