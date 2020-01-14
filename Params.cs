@@ -12,6 +12,7 @@ public class Program
 	
 	public static void Main()
 	{
+		int[] red = { 4, 3, 2, 5 };
 		UseParams(3, "five", 10.2f);
 		object[] array = new object[2];
 		array[0] = "cool";
