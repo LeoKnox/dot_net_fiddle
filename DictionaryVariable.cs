@@ -8,21 +8,42 @@ public class Program
 
 {
 
+                public class Scabs
+
+                {
+
+                                public int Fee { get; set; }
+
+                                public int Fi { get; set; }
+
+                               
+
+                                public Scabs(int fe, int fi)
+
+                                {
+
+                                                this.Fee = fe;
+
+                                                this.Fi = fi;
+
+                                }
+
+                }
+
+               
+
                 public static void Main()
 
                 {
 
-                                Dictionary<string, int> words = new Dictionary<string, int>();
+                                Scabs Ran = new Scabs(3, 4);
 
-                                words["one"] = 1;
+                                Dictionary<string, Scabs> Weird = new Dictionary<string, Scabs>();
 
-                                words["two"] = 2;
+                                Weird["Red"] = Ran;
 
-                                string a = "one";
-
-                                Console.WriteLine("Hello World " + words[a]);
+                                Console.WriteLine("Hello World " + Weird["Red"].Fee);
 
                 }
 
 }
-
