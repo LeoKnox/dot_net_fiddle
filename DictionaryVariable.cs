@@ -41,6 +41,11 @@ public class Program
                                 Dictionary<string, Scabs> Weird = new Dictionary<string, Scabs>();
 
                                 Weird["Red"] = Ran;
+                  
+                                foreach (string scab in Weird.Keys)
+                                {
+                                  Console.WriteLine(key);
+                                }
 
                                 Console.WriteLine("Hello World " + Weird["Red"].Fee);
 
