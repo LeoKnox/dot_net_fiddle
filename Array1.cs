@@ -10,6 +10,7 @@ public class Program
 	
 	public static void Main()
 	{
+		int[] numbs = new int[4];
 		Adventures adv0 = new Adventures();
 		adv0.name = "ssss";
 		adv0.hp = 3;
