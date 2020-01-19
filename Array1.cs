@@ -2,19 +2,29 @@ using System;
 					
 public class Program
 {
-	public class Adventures
+	public class Runner
 	{
-		public string name;
-		public int hp;
+		public string Name { get; set; }
+		public string Type { get; set; }
+		public int Use { get; set; }
+		
+		public Runner(string n, string t, int u)
+		{
+			this.Name = n;
+			this.Type = t;
+			this.Use = u;
+		}
 	}
 	
 	public static void Main()
 	{
-		int[] numbs = new int[4];
-		Adventures adv0 = new Adventures();
-		adv0.name = "ssss";
-		adv0.hp = 3;
-		Adventures[] peeps = { adv0 }; 
-		Console.WriteLine("Hello World");
+		Runner test = new Runner("Howard", "Red", 13);
+		string[] names = { "Strange", "Wayne", "Tree" };
+		int[] stats = new int[7];
+		foreach(var item in names)
+		{
+			Console.WriteLine(item);
+		}
+		Console.WriteLine("Hello World ");
 	}
 }
