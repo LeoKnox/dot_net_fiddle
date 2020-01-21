@@ -3,20 +3,25 @@ using System.Collections.Generic;
 					
 public class Program
 {
-	public class Red
+	public class Color
 	{
-		string xz { get; set; }
-		List<int> az = new List<int>();
+		private List<string> Red = new List<string>();
 		
-		public Red(int x, int y, int z)
+		public void AddRed(string x)
 		{
-			this.az[0] = x;
-			this.az[1] = y;
-			this.az[2] = z;
+			this.Red.Add(x);
 		}
+		
+		public string ScanRed(int y)
+		{
+			return this.Red[y];
+		}
+		
 	}
 	public static void Main()
 	{
-		Console.WriteLine("Hello World");
+		Color ddd = new Color();
+		ddd.AddRed("arrr");
+		Console.WriteLine("Hello World " + ddd.ScanRed(0));
 	}
 }
