@@ -22,6 +22,7 @@ public class Program
 		Strs bbb = new Strs("Three", "Four");
 		Strs ccc = new Strs("One", "Three");
 		lets[1] = bbb;
+		lets[2] = ccc;
 		nums.Add("One", 1);
 		nums.Add("Two", 2);
 		nums["Three"] = 3;
