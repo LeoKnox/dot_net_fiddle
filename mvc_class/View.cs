@@ -21,6 +21,11 @@
 			.field-validation-error {
 				color: #ff0000;
 			}
+			
+			td {
+				height: 20px;
+				width: 20px;
+			}
 
 		</style>
 	</head>
