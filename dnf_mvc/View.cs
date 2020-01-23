@@ -45,7 +45,7 @@
 					</div>
 				<p>@Model.Test</p> <!-- Displays Information -->
 				<table>
-					<tr><td colspan = @Model.Width rowspan = @Model.Length>b</td></tr>
+					
 					@for(int i = 0; i < 20; i++)
 					{
 					@:<tr>
@@ -54,6 +54,10 @@
 					 if (i >= Model.Length || j >= Model.Width)
 					{
 					@:<td>a </td>
+					}
+					else
+					{
+					@:<td></td>
 					}
 						}
 					@:</tr>
