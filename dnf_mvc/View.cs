@@ -50,7 +50,10 @@
 					@:<tr>
 						for(int j = 0; j < 20; j++)
 						{
+					 if (i > Model.Length || j > Model.Width)
+					{
 					@:<td>a </td>
+					}
 						}
 					@:</tr>
 					}
