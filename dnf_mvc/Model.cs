@@ -14,5 +14,7 @@ namespace HelloWorldMvcApp
 		//See here for list of answers
 		public string Answer { get; set; }
 		public string Test { get; set; }
+		public int Length { get; set; }
+		public int Width { get; set; }
 	}
 }
