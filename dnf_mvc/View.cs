@@ -21,6 +21,11 @@
 			.field-validation-error {
 				color: #ff0000;
 			}
+			
+			td {
+				height: 20px;
+				width: 20px;
+			}
 
 		</style>
 	</head>
@@ -38,6 +43,18 @@
 						@Html.ValidationMessageFor(model => model.Question)
 					</div>
 				<p>@Model.Test</p> <!-- Displays Information -->
+				<table>
+					<tr><td colspan = @Model.Width rowspan = @Model.Length>b</td></tr>
+					@for(int i = 0; i < 20; i++)
+					{
+					@:<tr>
+						for(int j = 0; j < 20; j++)
+						{
+					@:<td>a </td>
+						}
+					@:</tr>
+					}
+				</table>
 				
 					<button type="button" class="btn btn-success submit">Ask</button>
 				}
