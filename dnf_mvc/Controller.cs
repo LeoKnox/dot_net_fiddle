@@ -11,6 +11,8 @@ namespace HelloWorldMvcApp
 		{
 			SampleViewModel TT = new SampleViewModel();
 			TT.Test = "Test";
+			TT.Length = 3;
+			TT.Width = 5;
 			return View(TT);
 		}
 
