@@ -8,6 +8,7 @@ public class Program
 		switch (Test)
 		{
 			case "one":
+			case "onxe":
 				Console.WriteLine(Test);
 				break;
 			default:
