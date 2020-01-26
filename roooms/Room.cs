@@ -41,11 +41,15 @@ public class Program
 			{
 				if (i < 5 && i > 2 && j > 1 && j < 6)
 				{
+					dunarr[i, j] = 2;
+				}
+				else if (i <= 5 && i >=2 && j >= 1 && j<= 6)
+				{
 					dunarr[i, j] = 8;
 				}
 				else
 				{
-					dunarr[i, j] = 0;
+					dunarr[i, j] = 1;
 				}
 			}
 		}
