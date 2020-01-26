@@ -34,6 +34,15 @@ public class Program
 	
 	public static void Main()
 	{
-		Console.WriteLine("Hello World");
+		int[,] dunarr = new int[20, 20];
+		for (int i = 0; i < 20; i++)
+		{
+			for (int j = 0; j < 20; j++)
+			{
+				dunarr[i, j] = 0;
+			}
+		}
+				
+		Console.WriteLine(dunarr[3, 4]);
 	}
 }
