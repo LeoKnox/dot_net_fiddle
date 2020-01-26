@@ -39,7 +39,14 @@ public class Program
 		{
 			for (int j = 0; j < 20; j++)
 			{
-				dunarr[i, j] = 0;
+				if (i < 5 && i > 2 && j > 1 && j < 6)
+				{
+					dunarr[i, j] = 8;
+				}
+				else
+				{
+					dunarr[i, j] = 0;
+				}
 			}
 		}
 				
