@@ -44,5 +44,13 @@ public class Program
 		}
 				
 		Console.WriteLine(dunarr[3, 4]);
+		for (int x = 0; x < 20; x++)
+		{
+			for (int y = 0; y < 20; y++)
+			{
+				Console.Write(dunarr[x, y]);
+			}
+			Console.WriteLine();
+		}
 	}
 }
