@@ -68,37 +68,24 @@ public class Program
 		}
 	}
 	
-	public static void Main()
+	public static void DrawRoom(int[,] dr)
 	{
-		int[,] dunarr = new int[20, 20];
-		for (int i = 0; i < 20; i++)
-		{
-			for (int j = 0; j < 20; j++)
-			{
-				if (i < 5 && i > 2 && j > 1 && j < 6)
-				{
-					dunarr[i, j] = 2;
-				}
-				else if (i <= 5 && i >=2 && j >= 1 && j<= 6)
-				{
-					dunarr[i, j] = 8;
-				}
-				else
-				{
-					dunarr[i, j] = 1;
-				}
-			}
-		}		
-		Console.WriteLine(dunarr[3, 4]);
-		FillArray(dunarr);
-		AddRoom(dunarr, 2, 2, 4, 5);
 		for (int x = 0; x < 20; x++)
 		{
 			for (int y = 0; y < 20; y++)
 			{
-				Console.Write(dunarr[x, y]);
+				Console.Write(dr[x,y]);
 			}
 			Console.WriteLine();
 		}
+	}
+	
+	public static void Main()
+	{
+		int[,] dunarr = new int[20, 20];
+		Console.WriteLine(dunarr[3, 4]);
+		FillArray(dunarr);
+		AddRoom(dunarr, 2, 2, 4, 5);
+		DrawRoom(dunarr);
 	}
 }
