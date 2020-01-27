@@ -52,6 +52,19 @@ public class Program
 		for (int a = y; a < y + l; a++)
 		{
 			ar[x, a] = 0;
+			ar[x+w, a] = 0;
+		}
+		for (int b = x; b < x + w; b++)
+		{
+			ar[b, y] = 0;
+			ar[b, y+l] = 0;
+		}
+		for (int c = y + 1; c < y + l + 1; c++)
+		{
+			for (int d = x + 1; d < x + w - 1; d++)
+			{
+				ar[c, d] = 4;
+			}
 		}
 	}
 	
