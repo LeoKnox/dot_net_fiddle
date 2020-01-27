@@ -23,6 +23,10 @@ public class Program
 		int locy { get; set; }
 		List<Door> doors = new List<Door>();
 		
+		public Room()
+		{
+		}
+		
 		public Room(int l, int w, int x, int y)
 		{
 			this.length = l;
@@ -30,6 +34,15 @@ public class Program
 			this.locx = x;
 			this.locy = y;
 		}
+	}
+	
+	public int[,] FillArray(int[,] fa)
+	{
+		for (int x = 0; x < 20; x++)
+		{
+			fa[x, 0] = 1;
+		}
+		return fa;
 	}
 	
 	public static void Main()
