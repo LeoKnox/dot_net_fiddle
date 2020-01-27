@@ -36,13 +36,16 @@ public class Program
 		}
 	}
 	
-	public int[,] FillArray(int[,] fa)
+	public static void FillArray(int[,] fa)
 	{
 		for (int x = 0; x < 20; x++)
 		{
-			fa[x, 0] = 1;
+			for (int y=0; y < 20; y++)
+			{
+				fa[x, y] = 1;
+			}
 		}
-		return fa;
+		// return fa;
 	}
 	
 	public static void Main()
@@ -68,6 +71,7 @@ public class Program
 		}
 				
 		Console.WriteLine(dunarr[3, 4]);
+		FillArray(dunarr);
 		for (int x = 0; x < 20; x++)
 		{
 			for (int y = 0; y < 20; y++)
