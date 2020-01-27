@@ -45,7 +45,14 @@ public class Program
 				fa[x, y] = 1;
 			}
 		}
-		// return fa;
+	}
+	
+	public static void AddRoom(int[,] ar, int x, int y, int l, int w)
+	{
+		for (int a = y; a < y + l; a++)
+		{
+			ar[x, a] = 0;
+		}
 	}
 	
 	public static void Main()
@@ -68,10 +75,10 @@ public class Program
 					dunarr[i, j] = 1;
 				}
 			}
-		}
-				
+		}		
 		Console.WriteLine(dunarr[3, 4]);
 		FillArray(dunarr);
+		AddRoom(dunarr, 2, 2, 4, 5);
 		for (int x = 0; x < 20; x++)
 		{
 			for (int y = 0; y < 20; y++)
