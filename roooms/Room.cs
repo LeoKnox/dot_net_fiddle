@@ -54,7 +54,7 @@ public class Program
 			ar[x, a] = 0;
 			ar[x+w, a] = 0;
 		}
-		for (int b = x; b < x + w; b++)
+		for (int b = x; b < x + w + 1; b++)
 		{
 			ar[b, y] = 0;
 			ar[b, y+l] = 0;
