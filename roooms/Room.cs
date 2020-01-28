@@ -49,23 +49,23 @@ public class Program
 	
 	public static void AddRoom(int[,] ar, int x, int y, int l, int w)
 	{
-		for (int a = y; a < y + l; a++)
+		for (int a = y-1; a < y + l; a++)
 		{
 			ar[x, a] = 0;
 			ar[x+w, a] = 0;
 		}
-		for (int b = x; b < x + w + 1; b++)
+		for (int b = x; b < x + w; b++)
 		{
-			ar[b, y] = 0;
-			ar[b, y+l] = 0;
+			ar[b, y - 1] = 0;
+			ar[b, y + l - 1] = 0;
 		}
-		for (int c = y + 1; c < y + l + 1; c++)
+		/*for (int c = y; c < y + l; c++)
 		{
-			for (int d = x + 1; d < x + w - 1; d++)
+			for (int d = x; d < x + w -1; d++)
 			{
 				ar[c, d] = 4;
 			}
-		}
+		}*/
 	}
 	
 	public static void DrawRoom(int[,] dr)
@@ -86,6 +86,7 @@ public class Program
 		Console.WriteLine(dunarr[3, 4]);
 		FillArray(dunarr);
 		AddRoom(dunarr, 2, 2, 4, 5);
+		AddRoom(dunarr, 12, 8, 8, 6);
 		DrawRoom(dunarr);
 	}
 }
