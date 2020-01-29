@@ -70,9 +70,14 @@ public class Program
 	
 	public static void AddDoor(int[,] ad, int dw, int d, int l, int w)
 	{
-		if (dw == 0)
+		switch (dw)
 		{
-			ad[l, w+d] = 4;
+			case 0:
+				ad[l, w+d] = 4;
+				break;
+			case 3:
+				ad[l+d, w-1] = 4;
+				break;
 		}
 	}
 	
@@ -95,7 +100,7 @@ public class Program
 		FillArray(dunarr);
 		AddRoom(dunarr, 2, 2, 4, 5);
 		AddRoom(dunarr, 12, 8, 8, 6);
-		AddDoor(dunarr, 0, 3, 12, 8);
+		AddDoor(dunarr, 3, 3, 12, 8);
 		DrawRoom(dunarr);
 	}
 }
