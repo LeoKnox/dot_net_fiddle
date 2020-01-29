@@ -68,6 +68,14 @@ public class Program
 		}*/
 	}
 	
+	public static void AddDoor(int[,] ad, int dw, int d, int l, int w)
+	{
+		if (dw == 0)
+		{
+			ad[l, w+d] = 4;
+		}
+	}
+	
 	public static void DrawRoom(int[,] dr)
 	{
 		for (int x = 0; x < 20; x++)
@@ -87,6 +95,7 @@ public class Program
 		FillArray(dunarr);
 		AddRoom(dunarr, 2, 2, 4, 5);
 		AddRoom(dunarr, 12, 8, 8, 6);
+		AddDoor(dunarr, 0, 3, 8, 6);
 		DrawRoom(dunarr);
 	}
 }
