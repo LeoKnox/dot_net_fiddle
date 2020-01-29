@@ -95,7 +95,7 @@ public class Program
 		FillArray(dunarr);
 		AddRoom(dunarr, 2, 2, 4, 5);
 		AddRoom(dunarr, 12, 8, 8, 6);
-		AddDoor(dunarr, 0, 3, 8, 6);
+		AddDoor(dunarr, 0, 3, 12, 8);
 		DrawRoom(dunarr);
 	}
 }
