@@ -34,6 +34,11 @@ public class Program
 			this.locx = x;
 			this.locy = y;
 		}
+		
+		public void InsertDoor(Door d)
+		{
+			this.doors.Add(d);
+		}
 	}
 	
 	public static void FillArray(int[,] fa)
@@ -96,7 +101,7 @@ public class Program
 	public static void Main()
 	{
 		int[,] dunarr = new int[20, 20];
-		Console.WriteLine(dunarr[3, 4]);
+		Door dd = new Door(3, 4);
 		FillArray(dunarr);
 		AddRoom(dunarr, 2, 2, 4, 5);
 		AddRoom(dunarr, 12, 8, 8, 6);
