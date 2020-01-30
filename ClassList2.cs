@@ -15,6 +15,8 @@ public class Program
 	
 	public static void Main()
 	{
+		Corn Kay = new Corn();
+		Kay.AddKernal(3);
 		Console.WriteLine("Hello World");
 	}
 }
