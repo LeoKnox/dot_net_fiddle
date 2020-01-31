@@ -19,11 +19,17 @@ public class Program
 		{
 			return this.HP;
 		}
+		
+		public void TakeDamage(int d)
+		{
+			this.HP -= d;
+		}
 	}
 	
 	public static void Main()
 	{
 		Monster  Grog = new Monster("Orc", 44, 20);
+		Grog.TakeDamage(3);
 		Console.WriteLine(Grog.GetHp());
 	}
 }
