@@ -24,12 +24,17 @@ public class Program
 		{
 			this.HP -= d;
 		}
+		
+		public int DoDamage(int a)
+		{
+			return this.HP - (a * this.Str/3);
+		}
 	}
 	
 	public static void Main()
 	{
 		Monster  Grog = new Monster("Orc", 44, 20);
-		Grog.TakeDamage(3);
+		Grog.TakeDamage(Grog.DoDamage(3));
 		Console.WriteLine(Grog.GetHp());
 	}
 }
