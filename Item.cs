@@ -13,10 +13,17 @@ public class Program
 			this.Gold = g;
 			this.Treasure = t;
 		}
+		
+		public int GetGold()
+		{
+			return this.Gold;
+		}
 	}
 	
 	public static void Main()
 	{
-		Console.WriteLine("Hello World");
+		Item Chest = new Item("Chest", 300, "Axe");
+		
+		Console.WriteLine("Contains {0} gp!", Chest.GetGold());
 	}
 }
