@@ -5,18 +5,18 @@ public class Program
 	public class Item
 	{
 		string Style { get; set; }
-		int Gold { get; set; }
+		int? Value { get; set; }
 		string Treasure {get; set; }
-		public Item(string s, int g, string t)
+		public Item(string s, int v, string t)
 		{
 			this.Style = s;
-			this.Gold = g;
+			this.Value = v;
 			this.Treasure = t;
 		}
 		
-		public int GetGold()
+		public int? GetValue()
 		{
-			return this.Gold;
+			return this.Value;
 		}
 	}
 	
@@ -24,6 +24,6 @@ public class Program
 	{
 		Item Chest = new Item("Chest", 300, "Axe");
 		
-		Console.WriteLine("Contains {0} gp!", Chest.GetGold());
+		Console.WriteLine("Has {0} value!", Chest.GetValue());
 	}
 }
