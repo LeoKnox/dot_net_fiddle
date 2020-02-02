@@ -29,6 +29,11 @@ public class Program
 		{
 			return this.HP - (a * this.Str/3);
 		}
+		
+		public string DoAbility()
+		{
+			return "Does special ability 3";
+		}
 	}
 	
 	public static void Main()
@@ -36,5 +41,6 @@ public class Program
 		Monster  Grog = new Monster("Orc", 44, 20);
 		Grog.TakeDamage(Grog.DoDamage(3));
 		Console.WriteLine(Grog.GetHp());
+		Console.WriteLine(Grog.DoAbility());
 	}
 }
