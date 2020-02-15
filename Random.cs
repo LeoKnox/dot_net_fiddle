@@ -5,10 +5,12 @@ public class Program
 	public static void Main()
 	{
 		Random random = new Random();
-        // ... Get 3 random numbers.
-        //     These are always 5, 6, 7, 8 or 9.
-        Console.WriteLine("RANDOM: " + random.Next(1, 7));
-        Console.WriteLine("RANDOM: " + random.Next(1, 7));
-        Console.WriteLine("RANDOM: " + random.Next(1, 7));
+        Console.WriteLine("RANDOM6: " + random.Next(1, 7));
+        Console.WriteLine("RANDOM6: " + random.Next(1, 7));
+        Console.WriteLine("RANDOM6: " + random.Next(1, 7));
+		for (int i = 0; i < 10; i++)
+		{
+			Console.WriteLine("RANDOM: " + random.Next(1, 21));
+		}
 	}
 }
