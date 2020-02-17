@@ -48,3 +48,8 @@ public class Program
 		Console.WriteLine("1d6+1d4: {0}", four);
 	}
 }
+
+// 2d6: 675  2d6: 646
+// 1d8+2: 576  1d8+2: 554
+// 1d12: 663  1d12: 639
+// 1d6+1d4: 602  1d6+1d4: 589
